@@ -3,7 +3,8 @@
 
 
 
-##Remarque
+## Remarque :
+Cette ligne de code je l'ai prise sur Internet :
 
 ```css
 @keyframes text-shadow {
