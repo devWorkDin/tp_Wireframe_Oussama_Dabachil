@@ -1,0 +1,341 @@
+/* reset css */
+/* pas travailler en px ni em */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.6rem 'Montserrat', sans-serif;
+    margin: 0;
+    background: url(../asset/landscapedbsuper.jpeg)fixed center;
+}
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header ul .first img{
+    margin-top: -1rem;
+    height: 8rem;
+    width: 13rem;
+    align-items: center;
+}
+a{
+    color: #222;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+button{
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+/* theme css */
+
+:root{
+    --default-color: #222;
+    --background-color-header: #EBF7E3;
+    --main-color: #9BD770;
+    --middle-color: #375F1B;
+    --color-text: #fff;
+}
+/*header h1, footer p, section h3{
+    font-weight: 300;
+    text-align: center;
+    line-height: 6.5rem;
+}*/
+header ul{
+    top: 0;
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+
+}
+
+.hello{
+    animation: hello 1.3s linear;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 1rem;
+    background-color: rgba(34, 34, 34, 0.5);
+    z-index: 1;
+
+}
+
+header ul li{
+    height: 6rem;
+    text-align: center;
+    line-height: 6rem;
+    padding: 0rem;
+    background-color: rgb(1, 1, 2);
+
+}
+
+
+header ul li a{
+    color: #fff;
+    font-size: 2rem;
+}
+
+
+header .img-header-1{
+    animation: blur 1.2s linear;
+    z-index: -1;
+    background: url(../asset/dbzwallapper.jpeg)no-repeat fixed center center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+    margin-bottom: 4rem;
+}
+
+.article_of{
+    position: relative;
+   height: 0; /* les articles cachés */
+   opacity: 0;
+   z-index: -1;
+   overflow: hidden;
+   transition: all .6s ease-in-out;
+   
+
+}
+.article_on{
+    opacity: 1;
+    z-index: 1;
+    height: initial;
+}
+
+
+
+main .appear{
+    border: .3rem solid #ccc;
+    z-index: 1;
+    opacity: 1;
+    transition: all ease-in-out .3s;
+    display: grid;
+    max-width: 100rem;
+    margin: 3rem auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: top;
+    padding: 1rem;
+    background-color: #eeeeee41;
+}
+.hide1,.hide2,.hide3{
+   display: none;
+    }
+
+
+main figure img{
+    height: 30rem;
+    cursor: pointer;
+    order: 1;
+    display: block;
+    width: 100%;
+    clip-path: circle(100%);
+}
+
+
+main figure figcaption h2,main figure figcaption p{
+    padding: 1rem 1rem 0 1rem;
+    color: #fff;
+
+}
+main figure figcaption time{
+    padding: 1rem;
+    display: block;
+    color: rgb(240, 238, 238);
+    font-style: italic;
+    font-size: small;
+}
+main figure figcaption p{
+    line-height: 2.6rem;
+    padding-top: 0;
+}
+/* suite des article */
+main figure:nth-child(2n + 1) figcaption{
+    order: 1;
+}
+main .btn-add{
+    font-size: initial;
+    padding: 1rem;
+    display: block;
+    width: 20rem;
+    text-align: center;
+    border: solid .1rem rgb(255, 255, 255);
+    margin: 0 auto;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+main .btn-add::before{
+    content:'Voir Plus +';
+}
+main .btn-remove::before{
+    content:'Voir moins -';
+}
+.footer-nav{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 80rem;
+    margin:1rem auto;
+    border: solid .1rem #ccc;
+    padding: 1rem;
+    background:linear-gradient(to top,rgb(103, 114, 116),rgba(187, 57, 35, 0.15))
+}
+.footer-nav img{
+    width: 15rem;
+    padding: 0;
+    height: 6rem;
+}
+.effect5{
+    animation: wow4 .5s all ease-in-out;
+}
+details summary{
+    color: #fff;
+    list-style-type: none;
+    text-align: center;
+    padding: 1rem;
+    transition:  all ease-in-out .3s;
+
+    cursor: pointer;
+}
+details summary::-webkit-details-marker{
+    display: none;
+}
+details summary::before{
+    display: inline-block;
+    content: "\203A";
+    margin-right: .5rem;
+    transform: rotate(0deg);
+    vertical-align: top;
+}
+details[open] summary::before{
+    content: "\203A";
+    transform: rotate(90deg);
+    transition:  all ease-in-out .3s;
+}
+details ul{
+    line-height: 3.5rem;
+    text-align: center;
+}
+details ul li a{
+    color: #fff;
+}
+.effect{
+    animation: wow linear 1s infinite ;
+    font-weight:1000;
+
+}
+ 
+.effect2{
+    animation: text-shadow linear 1s infinite ;
+    font-weight:1000;
+
+}
+.effect3{
+    animation: wow2 linear 1s infinite ;
+    font-weight:1000;
+}
+.effect4{
+    animation: wow3 linear 1s infinite ;
+    font-weight:1000;
+}
+
+
+.effect5{
+    animation: wow4 linear 1s infinite ;
+    font-weight:1000;
+}
+
+
+/* responsive */
+@media screen and (max-width: 70rem) {
+
+    .footer-nav{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .first{
+     grid-column: 1/5;
+ 
+    }
+
+   #art2 figcaption,.hide1 figcaption,.hide3 figcaption{
+       order: 2;
+   }
+
+   
+    
+    header ul{
+     position: absolute;
+ 
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(4 ,1fr);
+     grid-gap: 0rem;
+ }
+ 
+ main .appear{
+     display: grid;
+     grid-template-columns: repeat(1 ,1fr);
+     grid-gap: 0rem;
+     margin: 2rem auto;
+     max-width: 70rem;
+     border: 1rem solid #0f00;
+ }
+ 
+ header ul li a {
+     font-size: 1.5rem;
+ }
+
+
+
+ }
+@media screen and (orientation: landscape) {
+    main .appear{
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+        grid-gap: 0rem;
+        margin: 2rem auto;
+        max-width: 90rem;
+        border: 1rem solid #0f00;
+    }
+}
+
+ /*
+@media screen and (max-width: 70rem){
+    main figure{
+    grid-template-columns: repeat(1, 1fr);
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    main figure:nth-child(2n + 2) figcaption{
+        order:initial;
+    }
+}
+@media screen and (orientation:landscape){
+    main figure{
+        grid-template-columns: repeat(2, 1fr);
+        }
+        header h1{
+            font-size: xx-large;
+        }
+        main figure:nth-child(2n + 2) figcaption{
+            order: 1;
+        }
+
+}*/
+    
+
